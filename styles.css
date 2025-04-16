@@ -1,0 +1,189 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* AMP Ad Container */
+.amp-ad-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Loading screen */
+#loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #4caf50;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loading-text {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Start Screen */
+#start-screen {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 1s ease;
+}
+
+#start-screen h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#start-screen button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#start-screen button:hover {
+  background: #ff3b2e;
+}
+
+/* Game board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#board div {
+  width: 100px;
+  height: 100px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#board div:hover {
+  background: #dcdcdc;
+}
+
+#status {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+#reset {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  background: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background: #5e35b1;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeInPop 0.5s ease;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #4caf50;
+}
+
+.popup-content button {
+  padding: 10px 25px;
+  background: #2196f3;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #1e88e5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInPop {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
