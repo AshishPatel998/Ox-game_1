@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>XO Game - Smart AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+</head>
+<body>
+
+  <!-- AMP Ad in background -->
+  <div class="amp-ad-container">
+    <amp-ad width="100vw" height="320"
+        type="adsense"
+        data-ad-client="ca-pub-8303489454573253"
+        data-ad-slot="7311834603"
+        data-auto-format="rspv"
+        data-full-width="">
+      <div overflow=""></div>
+    </amp-ad>
+  </div>
+
+  <!-- Loading screen -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+    <p id="loading-text">Loading... <span id="percent">0%</span></p>
+  </div>
+
+  <!-- Start screen -->
+  <div id="start-screen" style="display:none;">
+    <h1>Welcome to XO Game</h1>
+    <button onclick="startGame('player')">Play with Friend</button>
+    <button onclick="startGame('computer')">Play with Computer</button>
+  </div>
+
+  <!-- Game board -->
+  <div id="game" style="display:none;">
+    <h2 id="status"></h2>
+    <div id="board"></div>
+    <button id="reset">Restart</button>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <h2 id="popup-message"></h2>
+      <button onclick="resetGame()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
